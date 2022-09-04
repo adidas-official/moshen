@@ -90,11 +90,11 @@ WSGI_APPLICATION = 'moshen.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd1cl5ces5n9dm9',
-        'HOST': 'ec2-44-195-100-240.compute-1.amazonaws.com',
-        'USER': 'beflvzoayieyve',
+        'NAME': 'd8c2u2da4m99nm',
+        'HOST': 'ec2-52-48-159-67.eu-west-1.compute.amazonaws.com',
+        'USER': 'kvbbdlvvkvfnfl',
         'PORT': '5432',
-        'PASSWORD': 'c2e159429fbf75e43ce6beaeba749992a26c193152300e92c2d618b0bc720cee',
+        'PASSWORD': '1ac42f86b0f40b7798921fc37e507de6cefb3a68f005e2d704568ae90c9a7f09',
     }
 }
 
