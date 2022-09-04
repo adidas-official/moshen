@@ -1,0 +1,112 @@
+{% extends 'main/base.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+<div data-v-549045e2="" class="login normal route_view route_pc normal">
+    <div data-v-549045e2="" class="info">
+        <div data-v-549045e2="" class="info__b">
+            <p data-v-549045e2="">Information cannot be modified after registration</p>
+            <p data-v-549045e2="">Please keep your account information and password properly</p>
+            <p data-v-549045e2="">Do not use the same login password as other websites</p>
+        </div>
+        <div data-v-549045e2="" class="info__a">
+            <div data-v-34ea988d="" data-v-549045e2="" class="panel">
+                <form action="#" method="post">
+                    {% csrf_token %}
+                    <div data-v-34ea988d="" class="panel__title">Welcome Register Moshen Account</div>
+                    <div data-v-34ea988d="" class="info">
+                        <div data-v-34ea988d="" class="info__title">Email</div>
+                        <div data-v-34ea988d="" class="info__input el-input">
+                            <!---->
+<!--                                <input type="text" autocomplete="off" placeholder="Please enter your email address" class="el-input__inner" name="email">-->
+                            {{form.username|add_class:'el-input__inner'}}
+                            <!---->
+                            <!---->
+                            <!---->
+                            <!---->
+                        </div>
+                    </div>
+                    <div data-v-34ea988d="" class="info">
+                        <div data-v-34ea988d="" class="info__title">Set password</div>
+                        <div data-v-34ea988d="" class="info__input el-input">
+                            <!---->
+<!--                                <input type="password" autocomplete="off" maxlength="24" placeholder="8-24 bit length password, the first is a letter" class="el-input__inner" name="password1">-->
+                            {{form.password1|add_class:'el-input__inner'}}
+                            <!---->
+                            <!---->
+                            <!---->
+                            <!---->
+                        </div>
+                    </div>
+                    <div data-v-34ea988d="" class="info">
+                        <div data-v-34ea988d="" class="info__title">Please enter the password again</div>
+                        <div data-v-34ea988d="" class="info__input el-input">
+                            <!---->
+<!--                                <input type="password" autocomplete="off" maxlength="24" placeholder="Please enter the password again" class="el-input__inner" name="password2">-->
+                            {{form.password2|add_class:'el-input__inner'}}
+                            <!---->
+                            <!---->
+                            <!---->
+                            <!---->
+                        </div>
+                    </div>
+                    <div data-v-34ea988d="" class="info">
+                        <div data-v-34ea988d="" class="info__title">transaction password</div>
+                        <div data-v-34ea988d="" class="info__input el-input">
+                            <!---->
+<!--                                <input type="password" autocomplete="off" maxlength="24" placeholder="8-24 bit length password, the first is a letter" class="el-input__inner" name="transpassword1">-->
+                            {{form.transpass1|add_class:'el-input__inner'}}
+                            <!---->
+                            <!---->
+                            <!---->
+                            <!---->
+                        </div>
+                    </div>
+                    <div data-v-34ea988d="" class="info">
+                        <div data-v-34ea988d="" class="info__title">Please enter the new password again</div>
+                        <div data-v-34ea988d="" class="info__input el-input">
+                            <!---->
+<!--                                <input type="password" autocomplete="off" maxlength="24" placeholder="Please enter the transaction password again" class="el-input__inner" name="transpass2">-->
+                            {{form.transpass2|add_class:'el-input__inner'}}
+                            <!---->
+                            <!---->
+                            <!---->
+                            <!---->
+                        </div>
+                    </div>
+                    <div data-v-34ea988d="" class="info">
+                        <div data-v-34ea988d="" class="info__title">Invite code</div>
+                        <div data-v-34ea988d="" class="info__input el-input">
+                            <!---->
+<!--                                <input type="text" autocomplete="off" placeholder="Invite code" class="el-input__inner" name="invitecode">-->
+                            {{form.invitecode|add_class:'el-input__inner'}}
+                            <!---->
+                            <!---->
+                            <!---->
+                            <!---->
+                        </div>
+                    </div>
+                    <div data-v-34ea988d="" class="a-register" style="margin-top: 24px;">
+                        <label data-v-34ea988d="" class="el-checkbox">
+                            <span class="el-checkbox__input">
+                                <span class="el-checkbox__inner"></span>
+                                <input type="checkbox" role="checkbox" class="el-checkbox__original">
+                            </span>
+                            <span class="el-checkbox__label">Registration means consent 《User Agreement》<!----></span></label>
+                    </div>
+                    <div data-v-34ea988d="" class="info__footer">
+                        <div data-v-34ea988d="" class="info__footer-left">
+                            <button data-v-34ea988d="" type="submit" class="el-button a-btn el-button--default">
+                                <!----><span>Confirm and register</span></button>
+                        </div>
+                        <div data-v-34ea988d="" class="info__footer-left"></div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    {% include 'main/footer.html' %}
+</div>
+
+{% endblock %}

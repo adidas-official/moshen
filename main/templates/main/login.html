@@ -1,0 +1,45 @@
+{% extends 'main/base.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+<div data-v-549045e2="" class="login normal route_view route_pc normal">
+    <div data-v-549045e2="" class="info">
+        <div data-v-549045e2="" class="info__b">
+            <p data-v-549045e2="">Information cannot be modified after registration</p>
+            <p data-v-549045e2="">Please keep your account information and password properly</p>
+            <p data-v-549045e2="">Do not use the same login password as other websites</p>
+        </div>
+        <div data-v-549045e2="" class="info__a">
+            <div data-v-34ea988d="" data-v-549045e2="" class="panel">
+                <form action="#" method="post">
+                    {% csrf_token %}
+                    <div data-v-34ea988d="" class="panel__title">Welcome Login Moshen Account</div>
+                    <div data-v-34ea988d="" class="info">
+                        <div data-v-34ea988d="" class="info__title">Email</div>
+                        <div data-v-34ea988d="" class="info__input el-input">
+                            {{form.username|add_class:'el-input__inner'}}
+                        </div>
+                    </div>
+                    <div data-v-34ea988d="" class="info">
+                        <div data-v-34ea988d="" class="info__title">Login password</div>
+                        <div data-v-34ea988d="" class="info__input el-input">
+                            {{form.password|add_class:'el-input__inner'}}
+                        </div>
+                    </div>
+                    <div data-v-34ea988d="" class="info__footer">
+                        <div data-v-34ea988d="" class="info__footer-left">
+                            <button data-v-34ea988d="" type="submit" class="el-button a-btn el-button--default">
+                                <span>Login</span>
+                            </button>
+                        </div>
+                        <div data-v-34ea988d="" class="info__footer-left"></div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    {% include 'main/footer.html' %}
+</div>
+
+{% endblock %}

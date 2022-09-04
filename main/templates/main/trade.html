@@ -1,0 +1,479 @@
+{% extends 'main/base.html' %}
+{% load widget_tweaks %}
+{% load static %}
+
+{% block content %}
+<section data-v-0d3622a2="" class="app-main route_view route_pc">
+    <div data-v-3d25ab46="" data-v-0d3622a2="" class="container">
+        <div data-v-3d25ab46="" class="container__top">
+            <div data-v-3d25ab46="" class="top-l">
+                <div data-v-4a16c977="" data-v-3d25ab46="" class="panel">
+                    <div data-v-4a16c977="" class="el-tabs el-tabs--center">
+                        <div class="el-tabs__header is-center">
+                            <div class="el-tabs__nav-wrap is-center">
+                                <div class="el-tabs__nav-scroll">
+                                    <div role="tablist" class="el-tabs__nav is-center" style="transform: translateY(0px);">
+                                        <div class="el-tabs__active-bar is-center" style="height: 40px; transform: translateY(0px);"></div>
+                                        <div id="tab-USDT" aria-controls="pane-USDT" role="tab" aria-selected="true" tabindex="0" class="el-tabs__item is-center is-active">USDT</div>
+                                        <div id="tab-BTC" aria-controls="pane-BTC" role="tab" tabindex="-1" class="el-tabs__item is-center">BTC</div>
+                                        <div id="tab-ETH" aria-controls="pane-ETH" role="tab" tabindex="-1" class="el-tabs__item is-center">ETH</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="el-tabs__content">
+                            <div data-v-4a16c977="" role="tabpanel" id="pane-USDT" aria-labelledby="tab-USDT" class="el-tab-pane">
+                                <div data-v-4a16c977="" class="panel__content">
+                                    <ul data-v-4a16c977="">
+                                        <li data-v-4a16c977="" style="padding: 8px 0px; line-height: 15px;"><span data-v-4a16c977="">Pair</span><span data-v-4a16c977="">Latest</span><span data-v-4a16c977="">Rate</span></li>
+                                        <li data-v-4a16c977=""><span data-v-4a16c977="">BTC</span><span data-v-4a16c977="">19788.88</span><span data-v-4a16c977="" class="ratio-normal ratio-upper">+0.09%</span></li>
+                                        <li data-v-4a16c977=""><span data-v-4a16c977="">ETH</span><span data-v-4a16c977="">1554.96</span><span data-v-4a16c977="" class="ratio-normal ratio-upper">+0.41%</span></li>
+                                        <li data-v-4a16c977=""><span data-v-4a16c977="">LTC</span><span data-v-4a16c977="">60.06</span><span data-v-4a16c977="" class="ratio-normal ratio-lower">-0.82%</span></li>
+                                        <li data-v-4a16c977=""><span data-v-4a16c977="">EOS</span><span data-v-4a16c977="">1.4862</span><span data-v-4a16c977="" class="ratio-normal ratio-lower">-2.17%</span></li>
+                                        <li data-v-4a16c977=""><span data-v-4a16c977="">KINGM</span><span data-v-4a16c977="">0.649211</span><span data-v-4a16c977="" class="ratio-normal ratio-upper">+6.56%</span></li>
+                                        <li data-v-4a16c977=""><span data-v-4a16c977="">ADA</span><span data-v-4a16c977="">0.494917</span><span data-v-4a16c977="" class="ratio-normal ratio-upper">+3.31%</span></li>
+                                        <li data-v-4a16c977=""><span data-v-4a16c977="">XRP</span><span data-v-4a16c977="">0.32909</span><span data-v-4a16c977="" class="ratio-normal ratio-lower">-0.1%</span></li>
+                                        <li data-v-4a16c977=""><span data-v-4a16c977="">DOGE</span><span data-v-4a16c977="">0.062414</span><span data-v-4a16c977="" class="ratio-normal ratio-lower">-0.39%</span></li>
+                                        <li data-v-4a16c977=""><span data-v-4a16c977="">SHIB</span><span data-v-4a16c977="">0.00001237</span><span data-v-4a16c977="" class="ratio-normal ratio-upper">+0.97%</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div data-v-4a16c977="" role="tabpanel" aria-hidden="true" id="pane-BTC" aria-labelledby="tab-BTC" class="el-tab-pane" style="display: none;">
+                                <div data-v-4a16c977="" class="panel__content">
+                                    <ul data-v-4a16c977="">
+                                        <li data-v-4a16c977="" style="padding: 8px 0px; line-height: 15px;"><span data-v-4a16c977="">Pair</span><span data-v-4a16c977="">Latest</span><span data-v-4a16c977="">Rate</span></li>
+                                        <li data-v-4a16c977=""><span data-v-4a16c977="">BTC</span><span data-v-4a16c977="">19788.88</span><span data-v-4a16c977="" class="ratio-normal ratio-upper">+0.09%</span></li>
+                                        <li data-v-4a16c977=""><span data-v-4a16c977="">ETH</span><span data-v-4a16c977="">1554.96</span><span data-v-4a16c977="" class="ratio-normal ratio-upper">+0.41%</span></li>
+                                        <li data-v-4a16c977=""><span data-v-4a16c977="">LTC</span><span data-v-4a16c977="">60.06</span><span data-v-4a16c977="" class="ratio-normal ratio-lower">-0.82%</span></li>
+                                        <li data-v-4a16c977=""><span data-v-4a16c977="">EOS</span><span data-v-4a16c977="">1.4862</span><span data-v-4a16c977="" class="ratio-normal ratio-lower">-2.17%</span></li>
+                                        <li data-v-4a16c977=""><span data-v-4a16c977="">KINGM</span><span data-v-4a16c977="">0.649211</span><span data-v-4a16c977="" class="ratio-normal ratio-upper">+6.56%</span></li>
+                                        <li data-v-4a16c977=""><span data-v-4a16c977="">ADA</span><span data-v-4a16c977="">0.494917</span><span data-v-4a16c977="" class="ratio-normal ratio-upper">+3.31%</span></li>
+                                        <li data-v-4a16c977=""><span data-v-4a16c977="">XRP</span><span data-v-4a16c977="">0.32909</span><span data-v-4a16c977="" class="ratio-normal ratio-lower">-0.1%</span></li>
+                                        <li data-v-4a16c977=""><span data-v-4a16c977="">DOGE</span><span data-v-4a16c977="">0.062414</span><span data-v-4a16c977="" class="ratio-normal ratio-lower">-0.39%</span></li>
+                                        <li data-v-4a16c977=""><span data-v-4a16c977="">SHIB</span><span data-v-4a16c977="">0.00001237</span><span data-v-4a16c977="" class="ratio-normal ratio-upper">+0.97%</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div data-v-4a16c977="" role="tabpanel" aria-hidden="true" id="pane-ETH" aria-labelledby="tab-ETH" class="el-tab-pane" style="display: none;">
+                                <div data-v-4a16c977="" class="panel__content">
+                                    <ul data-v-4a16c977="">
+                                        <li data-v-4a16c977="" style="padding: 8px 0px; line-height: 15px;"><span data-v-4a16c977="">Pair</span><span data-v-4a16c977="">Latest</span><span data-v-4a16c977="">Rate</span></li>
+                                        <li data-v-4a16c977=""><span data-v-4a16c977="">BTC</span><span data-v-4a16c977="">19788.88</span><span data-v-4a16c977="" class="ratio-normal ratio-upper">+0.09%</span></li>
+                                        <li data-v-4a16c977=""><span data-v-4a16c977="">ETH</span><span data-v-4a16c977="">1554.96</span><span data-v-4a16c977="" class="ratio-normal ratio-upper">+0.41%</span></li>
+                                        <li data-v-4a16c977=""><span data-v-4a16c977="">LTC</span><span data-v-4a16c977="">60.06</span><span data-v-4a16c977="" class="ratio-normal ratio-lower">-0.82%</span></li>
+                                        <li data-v-4a16c977=""><span data-v-4a16c977="">EOS</span><span data-v-4a16c977="">1.4862</span><span data-v-4a16c977="" class="ratio-normal ratio-lower">-2.17%</span></li>
+                                        <li data-v-4a16c977=""><span data-v-4a16c977="">KINGM</span><span data-v-4a16c977="">0.649211</span><span data-v-4a16c977="" class="ratio-normal ratio-upper">+6.56%</span></li>
+                                        <li data-v-4a16c977=""><span data-v-4a16c977="">ADA</span><span data-v-4a16c977="">0.494917</span><span data-v-4a16c977="" class="ratio-normal ratio-upper">+3.31%</span></li>
+                                        <li data-v-4a16c977=""><span data-v-4a16c977="">XRP</span><span data-v-4a16c977="">0.32909</span><span data-v-4a16c977="" class="ratio-normal ratio-lower">-0.1%</span></li>
+                                        <li data-v-4a16c977=""><span data-v-4a16c977="">DOGE</span><span data-v-4a16c977="">0.062414</span><span data-v-4a16c977="" class="ratio-normal ratio-lower">-0.39%</span></li>
+                                        <li data-v-4a16c977=""><span data-v-4a16c977="">SHIB</span><span data-v-4a16c977="">0.00001237</span><span data-v-4a16c977="" class="ratio-normal ratio-upper">+0.97%</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-v-3d25ab46="" class="top-k mrg-l-3">
+                <div data-v-582ed642="" data-v-3d25ab46="" class="panel">
+                    <div data-v-582ed642="" class="panel__top">
+                        <div data-v-582ed642="" class="panel__left ratio-upper">KINGM / USDT</div>
+                        <div data-v-582ed642="" class="panel__right">
+                            <div data-v-582ed642="" class="panel__right-item"><span data-v-582ed642="" class="ratio-upper">0.649211</span><span data-v-582ed642="">Price</span></div>
+                            <div data-v-582ed642="" class="panel__right-item"><span data-v-582ed642="" class="ratio-upper">+6.56%</span><span data-v-582ed642="">24H Rate</span></div>
+                            <div data-v-582ed642="" class="panel__right-item"><span data-v-582ed642="" style="color: rgb(241, 241, 241);">0.674465</span><span data-v-582ed642="">24H high(USDT)</span></div>
+                            <div data-v-582ed642="" class="panel__right-item"><span data-v-582ed642="" style="color: rgb(241, 241, 241);">0.6018</span><span data-v-582ed642="">24H low(USDT)</span></div>
+                            <div data-v-582ed642="" class="panel__right-item"><span data-v-582ed642="" style="color: rgb(241, 241, 241);">1933806.3</span><span data-v-582ed642="">24H Deal(KINGM)</span></div>
+                        </div>
+                    </div>
+                    <div data-v-582ed642="" class="panel__bottom">
+                        <div data-v-582ed642="" class="panel__left">
+                            <button data-v-582ed642="" type="button" class="el-button time-btn el-button--default selected">
+                                <!----><!---->
+                                <span> 1M </span>
+                            </button>
+                            <button data-v-582ed642="" type="button" class="el-button time-btn el-button--default">
+                                <!----><!---->
+                                <span> 5M </span>
+                            </button>
+                            <button data-v-582ed642="" type="button" class="el-button time-btn el-button--default">
+                                <!----><!---->
+                                <span> 15M </span>
+                            </button>
+                            <button data-v-582ed642="" type="button" class="el-button time-btn el-button--default">
+                                <!----><!---->
+                                <span> 30M </span>
+                            </button>
+                            <button data-v-582ed642="" type="button" class="el-button time-btn el-button--default">
+                                <!----><!---->
+                                <span> 1D </span>
+                            </button>
+                        </div>
+                        <div data-v-582ed642="" class="panel__right">
+                            <span data-v-582ed642="" class="setting-s"><i data-v-582ed642="" class="iconfont icon-shezhi"></i></span>
+                        </div>
+                    </div>
+                    <div data-v-582ed642="" class="el-dialog__wrapper" style="display: none;">
+                        <div role="dialog" aria-modal="true" aria-label="Settings" class="el-dialog" style="margin-top: 15vh; width: 30%;">
+                            <div class="el-dialog__header">
+                                <span class="el-dialog__title">Settings</span><button type="button" aria-label="Close" class="el-dialog__headerbtn"><i class="el-dialog__close el-icon el-icon-close"></i></button>
+                            </div>
+                            <!----><!---->
+                        </div>
+                    </div>
+                </div>
+                <div data-v-728eebeb="" data-v-3d25ab46="" id="technical-indicator-k-line" class="k-line-chart" style="height: 510px;">
+                    <div tabindex="1" style="user-select: none; -webkit-tap-highlight-color: transparent; position: relative; outline: none; border-style: none; width: 100%; cursor: crosshair;">
+                        <div style="width: 100%; margin: 0px; padding: 0px; position: relative; overflow: hidden; height: 384px;">
+                            <div style="margin: 0px; padding: 0px; position: absolute; top: 0px; overflow: hidden; left: 0px">
+                                <img  src="{% static '/img/chart-trade-top.png' %}">
+                            </div>
+                        </div>
+                        <div style="margin: 0px; padding: 0px; position: relative; background-color: rgb(221, 221, 221); height: 1px; width: 100%;">
+                            <div style="width: 100%; height: 7px; margin: 0px; padding: 0px; position: absolute; top: -3px; z-index: 20; cursor: ns-resize;"></div>
+                        </div>
+                        <div style="width: 100%; margin: 0px; padding: 0px; position: relative; overflow: hidden; height: 100px;">
+                            <div style="margin: 0px; padding: 0px; position: absolute; top: 0px; overflow: hidden; left: 0px">
+                                <img src="{% static '/img/chart-trade-bottom.png' %}">
+                            </div>
+                        </div>
+                        <div style="width: 100%; margin: 0px; padding: 0px; position: relative; overflow: hidden; height: 25px;">
+                            <div style="margin: 0px; padding: 0px; position: absolute; top: 0px; overflow: hidden; left: 0px; width: 771px; height: 25px;">
+                                <canvas width="771" height="25" style="position: absolute; top: 0px; left: 0px; z-index: 2; width: 771px; height: 25px;"></canvas>
+                                <canvas width="771" height="25" style="position: absolute; top: 0px; left: 0px; z-index: 2; width: 771px; height: 25px;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-v-3d25ab46="" class="top-p mrg-l-3">
+                <div data-v-0f7c9e80="" data-v-3d25ab46="" class="panel">
+                    <div data-v-0f7c9e80="" class="panel__title">Handicap</div>
+                    <div data-v-0f7c9e80="" class="panel__desc"><span data-v-0f7c9e80="">Pos</span><span data-v-0f7c9e80="">Price</span><span data-v-0f7c9e80="">Num</span></div>
+                    <ul data-v-0f7c9e80="" class="panel__top">
+                        <li data-v-0f7c9e80="" class="panel__item"><span data-v-0f7c9e80="" style="color: rgb(204, 73, 81);">Sell 10</span><span data-v-0f7c9e80="">19786.48</span><span data-v-0f7c9e80="">0.01</span></li>
+                        <li data-v-0f7c9e80="" class="panel__item"><span data-v-0f7c9e80="" style="color: rgb(204, 73, 81);">Sell 9</span><span data-v-0f7c9e80="">19786.45</span><span data-v-0f7c9e80="">0.0003</span></li>
+                        <li data-v-0f7c9e80="" class="panel__item"><span data-v-0f7c9e80="" style="color: rgb(204, 73, 81);">Sell 8</span><span data-v-0f7c9e80="">19786.32</span><span data-v-0f7c9e80="">0.32</span></li>
+                        <li data-v-0f7c9e80="" class="panel__item"><span data-v-0f7c9e80="" style="color: rgb(204, 73, 81);">Sell 7</span><span data-v-0f7c9e80="">19785.49</span><span data-v-0f7c9e80="">0.45</span></li>
+                        <li data-v-0f7c9e80="" class="panel__item"><span data-v-0f7c9e80="" style="color: rgb(204, 73, 81);">Sell 6</span><span data-v-0f7c9e80="">19785.46</span><span data-v-0f7c9e80="">0.01</span></li>
+                        <li data-v-0f7c9e80="" class="panel__item"><span data-v-0f7c9e80="" style="color: rgb(204, 73, 81);">Sell 5</span><span data-v-0f7c9e80="">19785.45</span><span data-v-0f7c9e80="">0.1</span></li>
+                        <li data-v-0f7c9e80="" class="panel__item"><span data-v-0f7c9e80="" style="color: rgb(204, 73, 81);">Sell 4</span><span data-v-0f7c9e80="">19784.97</span><span data-v-0f7c9e80="">0.901</span></li>
+                        <li data-v-0f7c9e80="" class="panel__item"><span data-v-0f7c9e80="" style="color: rgb(204, 73, 81);">Sell 3</span><span data-v-0f7c9e80="">19784.95</span><span data-v-0f7c9e80="">0.0004</span></li>
+                        <li data-v-0f7c9e80="" class="panel__item"><span data-v-0f7c9e80="" style="color: rgb(204, 73, 81);">Sell 2</span><span data-v-0f7c9e80="">19784.94</span><span data-v-0f7c9e80="">0.0143</span></li>
+                        <li data-v-0f7c9e80="" class="panel__item"><span data-v-0f7c9e80="" style="color: rgb(204, 73, 81);">Sell 1</span><span data-v-0f7c9e80="">19784.29</span><span data-v-0f7c9e80="">0.0728</span></li>
+                    </ul>
+                    <div data-v-0f7c9e80="" class="panel__price"><span data-v-0f7c9e80="">0.649211</span><span data-v-0f7c9e80="">USDT</span></div>
+                    <ul data-v-0f7c9e80="" class="panel__bottom">
+                        <li data-v-0f7c9e80="" class="panel__item"><span data-v-0f7c9e80="" style="color: rgb(39, 176, 84);">Buy 1</span><span data-v-0f7c9e80="">19784.28</span><span data-v-0f7c9e80="">0.124</span></li>
+                        <li data-v-0f7c9e80="" class="panel__item"><span data-v-0f7c9e80="" style="color: rgb(39, 176, 84);">Buy 2</span><span data-v-0f7c9e80="">19783.47</span><span data-v-0f7c9e80="">0.0093</span></li>
+                        <li data-v-0f7c9e80="" class="panel__item"><span data-v-0f7c9e80="" style="color: rgb(39, 176, 84);">Buy 3</span><span data-v-0f7c9e80="">19782.49</span><span data-v-0f7c9e80="">0.4898</span></li>
+                        <li data-v-0f7c9e80="" class="panel__item"><span data-v-0f7c9e80="" style="color: rgb(39, 176, 84);">Buy 4</span><span data-v-0f7c9e80="">19782.48</span><span data-v-0f7c9e80="">0.01</span></li>
+                        <li data-v-0f7c9e80="" class="panel__item"><span data-v-0f7c9e80="" style="color: rgb(39, 176, 84);">Buy 5</span><span data-v-0f7c9e80="">19782.45</span><span data-v-0f7c9e80="">0.0003</span></li>
+                        <li data-v-0f7c9e80="" class="panel__item"><span data-v-0f7c9e80="" style="color: rgb(39, 176, 84);">Buy 6</span><span data-v-0f7c9e80="">19782.01</span><span data-v-0f7c9e80="">0.0099</span></li>
+                        <li data-v-0f7c9e80="" class="panel__item"><span data-v-0f7c9e80="" style="color: rgb(39, 176, 84);">Buy 7</span><span data-v-0f7c9e80="">19781.86</span><span data-v-0f7c9e80="">0.03</span></li>
+                        <li data-v-0f7c9e80="" class="panel__item"><span data-v-0f7c9e80="" style="color: rgb(39, 176, 84);">Buy 8</span><span data-v-0f7c9e80="">19781.72</span><span data-v-0f7c9e80="">0.9012</span></li>
+                        <li data-v-0f7c9e80="" class="panel__item"><span data-v-0f7c9e80="" style="color: rgb(39, 176, 84);">Buy 9</span><span data-v-0f7c9e80="">19781.62</span><span data-v-0f7c9e80="">0.06</span></li>
+                        <li data-v-0f7c9e80="" class="panel__item"><span data-v-0f7c9e80="" style="color: rgb(39, 176, 84);">Buy 10</span><span data-v-0f7c9e80="">19781.49</span><span data-v-0f7c9e80="">0.45</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div data-v-3d25ab46="" class="top-a mrg-l-3">
+                <div data-v-4ff93630="" data-v-3d25ab46="" class="panel">
+                    <div data-v-4ff93630="" class="panel__title">Full Transaction</div>
+                    <div data-v-4ff93630="" class="panel__desc"><span data-v-4ff93630="">Time</span><span data-v-4ff93630="">Price</span><span data-v-4ff93630="">Num</span></div>
+                    <ul data-v-4ff93630="" class="panel__top">
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(204, 73, 81);">
+                            <span data-v-4ff93630="">02:20:30</span><span data-v-4ff93630="" style="margin-right: 10px;">19788.02</span><span data-v-4ff93630="">0.0031</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(39, 176, 84);">
+                            <span data-v-4ff93630="">02:20:26</span><span data-v-4ff93630="" style="margin-right: 10px;">19788.03</span><span data-v-4ff93630="">0.0006</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(204, 73, 81);">
+                            <span data-v-4ff93630="">02:20:25</span><span data-v-4ff93630="" style="margin-right: 10px;">19788.02</span><span data-v-4ff93630="">0.0006</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(204, 73, 81);">
+                            <span data-v-4ff93630="">02:20:25</span><span data-v-4ff93630="" style="margin-right: 10px;">19788.02</span><span data-v-4ff93630="">0.0200</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(204, 73, 81);">
+                            <span data-v-4ff93630="">02:20:25</span><span data-v-4ff93630="" style="margin-right: 10px;">19788.49</span><span data-v-4ff93630="">0.0003</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(204, 73, 81);">
+                            <span data-v-4ff93630="">02:20:25</span><span data-v-4ff93630="" style="margin-right: 10px;">19789.69</span><span data-v-4ff93630="">0.1600</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(204, 73, 81);">
+                            <span data-v-4ff93630="">02:20:25</span><span data-v-4ff93630="" style="margin-right: 10px;">19789.69</span><span data-v-4ff93630="">0.0200</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(204, 73, 81);">
+                            <span data-v-4ff93630="">02:20:25</span><span data-v-4ff93630="" style="margin-right: 10px;">19789.69</span><span data-v-4ff93630="">0.1350</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(204, 73, 81);">
+                            <span data-v-4ff93630="">02:20:24</span><span data-v-4ff93630="" style="margin-right: 10px;">19791.49</span><span data-v-4ff93630="">0.0003</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(39, 176, 84);">
+                            <span data-v-4ff93630="">02:20:24</span><span data-v-4ff93630="" style="margin-right: 10px;">19791.5</span><span data-v-4ff93630="">0.0010</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(204, 73, 81);">
+                            <span data-v-4ff93630="">02:20:23</span><span data-v-4ff93630="" style="margin-right: 10px;">19794.15</span><span data-v-4ff93630="">0.0490</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(204, 73, 81);">
+                            <span data-v-4ff93630="">02:20:23</span><span data-v-4ff93630="" style="margin-right: 10px;">19794.15</span><span data-v-4ff93630="">0.0010</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(204, 73, 81);">
+                            <span data-v-4ff93630="">02:20:23</span><span data-v-4ff93630="" style="margin-right: 10px;">19794.6</span><span data-v-4ff93630="">0.0005</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(39, 176, 84);">
+                            <span data-v-4ff93630="">02:20:19</span><span data-v-4ff93630="" style="margin-right: 10px;">19793.92</span><span data-v-4ff93630="">0.0099</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(39, 176, 84);">
+                            <span data-v-4ff93630="">02:20:19</span><span data-v-4ff93630="" style="margin-right: 10px;">19792.49</span><span data-v-4ff93630="">0.0003</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(39, 176, 84);">
+                            <span data-v-4ff93630="">02:20:19</span><span data-v-4ff93630="" style="margin-right: 10px;">19792.41</span><span data-v-4ff93630="">0.0137</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(39, 176, 84);">
+                            <span data-v-4ff93630="">02:20:19</span><span data-v-4ff93630="" style="margin-right: 10px;">19792.41</span><span data-v-4ff93630="">0.0079</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(39, 176, 84);">
+                            <span data-v-4ff93630="">02:20:19</span><span data-v-4ff93630="" style="margin-right: 10px;">19792.41</span><span data-v-4ff93630="">0.0040</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(39, 176, 84);">
+                            <span data-v-4ff93630="">02:20:19</span><span data-v-4ff93630="" style="margin-right: 10px;">19792.26</span><span data-v-4ff93630="">0.4811</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(39, 176, 84);">
+                            <span data-v-4ff93630="">02:20:19</span><span data-v-4ff93630="" style="margin-right: 10px;">19790.92</span><span data-v-4ff93630="">0.0161</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(39, 176, 84);">
+                            <span data-v-4ff93630="">02:20:18</span><span data-v-4ff93630="" style="margin-right: 10px;">19789.49</span><span data-v-4ff93630="">0.0003</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(39, 176, 84);">
+                            <span data-v-4ff93630="">02:20:18</span><span data-v-4ff93630="" style="margin-right: 10px;">19788.05</span><span data-v-4ff93630="">0.0019</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(39, 176, 84);">
+                            <span data-v-4ff93630="">02:20:18</span><span data-v-4ff93630="" style="margin-right: 10px;">19785.5</span><span data-v-4ff93630="">0.0048</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(39, 176, 84);">
+                            <span data-v-4ff93630="">02:20:06</span><span data-v-4ff93630="" style="margin-right: 10px;">19787.08</span><span data-v-4ff93630="">0.0010</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(39, 176, 84);">
+                            <span data-v-4ff93630="">02:20:06</span><span data-v-4ff93630="" style="margin-right: 10px;">19787.08</span><span data-v-4ff93630="">0.0005</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(204, 73, 81);">
+                            <span data-v-4ff93630="">02:20:06</span><span data-v-4ff93630="" style="margin-right: 10px;">19788.49</span><span data-v-4ff93630="">0.0003</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(204, 73, 81);">
+                            <span data-v-4ff93630="">02:20:06</span><span data-v-4ff93630="" style="margin-right: 10px;">19791.16</span><span data-v-4ff93630="">0.0460</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(204, 73, 81);">
+                            <span data-v-4ff93630="">02:20:05</span><span data-v-4ff93630="" style="margin-right: 10px;">19791.16</span><span data-v-4ff93630="">0.0005</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(204, 73, 81);">
+                            <span data-v-4ff93630="">02:20:05</span><span data-v-4ff93630="" style="margin-right: 10px;">19791.16</span><span data-v-4ff93630="">0.0017</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(204, 73, 81);">
+                            <span data-v-4ff93630="">02:20:03</span><span data-v-4ff93630="" style="margin-right: 10px;">19791.49</span><span data-v-4ff93630="">0.0002</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(204, 73, 81);">
+                            <span data-v-4ff93630="">02:20:03</span><span data-v-4ff93630="" style="margin-right: 10px;">19791.49</span><span data-v-4ff93630="">0.0005</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(204, 73, 81);">
+                            <span data-v-4ff93630="">02:20:02</span><span data-v-4ff93630="" style="margin-right: 10px;">19792.64</span><span data-v-4ff93630="">0.0312</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(204, 73, 81);">
+                            <span data-v-4ff93630="">02:20:02</span><span data-v-4ff93630="" style="margin-right: 10px;">19792.64</span><span data-v-4ff93630="">0.0400</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(204, 73, 81);">
+                            <span data-v-4ff93630="">02:20:01</span><span data-v-4ff93630="" style="margin-right: 10px;">19792.64</span><span data-v-4ff93630="">0.0021</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(39, 176, 84);">
+                            <span data-v-4ff93630="">02:19:59</span><span data-v-4ff93630="" style="margin-right: 10px;">19792.65</span><span data-v-4ff93630="">0.0077</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(39, 176, 84);">
+                            <span data-v-4ff93630="">02:19:42</span><span data-v-4ff93630="" style="margin-right: 10px;">19792.64</span><span data-v-4ff93630="">0.0001</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(204, 73, 81);">
+                            <span data-v-4ff93630="">02:19:40</span><span data-v-4ff93630="" style="margin-right: 10px;">19792.63</span><span data-v-4ff93630="">0.0007</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(39, 176, 84);">
+                            <span data-v-4ff93630="">02:19:37</span><span data-v-4ff93630="" style="margin-right: 10px;">19792.64</span><span data-v-4ff93630="">0.0004</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(204, 73, 81);">
+                            <span data-v-4ff93630="">02:19:36</span><span data-v-4ff93630="" style="margin-right: 10px;">19792.63</span><span data-v-4ff93630="">0.0025</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(204, 73, 81);">
+                            <span data-v-4ff93630="">02:19:35</span><span data-v-4ff93630="" style="margin-right: 10px;">19792.63</span><span data-v-4ff93630="">0.0007</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(39, 176, 84);">
+                            <span data-v-4ff93630="">02:19:33</span><span data-v-4ff93630="" style="margin-right: 10px;">19791.51</span><span data-v-4ff93630="">0.0083</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(39, 176, 84);">
+                            <span data-v-4ff93630="">02:19:33</span><span data-v-4ff93630="" style="margin-right: 10px;">19791.27</span><span data-v-4ff93630="">0.0002</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(39, 176, 84);">
+                            <span data-v-4ff93630="">02:19:33</span><span data-v-4ff93630="" style="margin-right: 10px;">19791.27</span><span data-v-4ff93630="">0.0228</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(39, 176, 84);">
+                            <span data-v-4ff93630="">02:19:33</span><span data-v-4ff93630="" style="margin-right: 10px;">19790.05</span><span data-v-4ff93630="">0.1000</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(39, 176, 84);">
+                            <span data-v-4ff93630="">02:19:33</span><span data-v-4ff93630="" style="margin-right: 10px;">19790.04</span><span data-v-4ff93630="">0.0150</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(39, 176, 84);">
+                            <span data-v-4ff93630="">02:19:33</span><span data-v-4ff93630="" style="margin-right: 10px;">19788.71</span><span data-v-4ff93630="">0.0007</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(39, 176, 84);">
+                            <span data-v-4ff93630="">02:19:32</span><span data-v-4ff93630="" style="margin-right: 10px;">19786.89</span><span data-v-4ff93630="">0.0255</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(39, 176, 84);">
+                            <span data-v-4ff93630="">02:19:32</span><span data-v-4ff93630="" style="margin-right: 10px;">19786.89</span><span data-v-4ff93630="">0.0110</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(39, 176, 84);">
+                            <span data-v-4ff93630="">02:19:32</span><span data-v-4ff93630="" style="margin-right: 10px;">19785.58</span><span data-v-4ff93630="">0.0003</span>
+                        </li>
+                        <li data-v-4ff93630="" class="panel__item" style="color: rgb(39, 176, 84);">
+                            <span data-v-4ff93630="">02:19:32</span><span data-v-4ff93630="" style="margin-right: 10px;">19785.58</span><span data-v-4ff93630="">0.0000</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div data-v-3d25ab46="" class="container__bottom">
+            <div data-v-3d25ab46="" class="bottom-l">
+                <div data-v-f03d57b8="" data-v-3d25ab46="" class="container">
+                    <div data-v-f03d57b8="" class="total">
+                        <span data-v-f03d57b8="">Open order</span>
+                        <span data-v-f03d57b8="" class="select">
+                            <button data-v-f03d57b8="" type="button" class="el-button select_btn el-button--default selected">
+                                <!----><!---->
+                                <span>Buy</span>
+                            </button>
+                            <button data-v-f03d57b8="" type="button" class="el-button select_btn el-button--default">
+                                <!----><!---->
+                                <span>Sell</span>
+                            </button>
+                        </span>
+                    </div>
+                    <div data-v-f03d57b8="" class="assert">
+                        <ul data-v-f03d57b8="" id="pTable" style="overflow: auto;">
+                            <li data-v-f03d57b8="" class="pHeader">
+                                <span data-v-f03d57b8="">Type</span><span data-v-f03d57b8="">Pair</span><span data-v-f03d57b8="">Price</span><span data-v-f03d57b8="">Num</span><span data-v-f03d57b8="">Time</span>
+                                <span data-v-f03d57b8="">Trade</span>
+                            </li>
+                            <p data-v-f03d57b8="" class="el-loading-footer-tip">No more</p>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div data-v-3d25ab46="" class="bottom-r mrg-l-3">
+                <div data-v-457be90f="" data-v-3d25ab46="" class="oper">
+                    <div data-v-457be90f="" class="oper__desc">
+                        <div data-v-457be90f="" class="oper__desc-title">Trade</div>
+                        <div data-v-457be90f="" class="oper__desc-tip">Deposit</div>
+                    </div>
+                    <div data-v-457be90f="" class="oper__action">
+                        <button data-v-457be90f="" type="button" class="el-button oper__action-btn el-button--default buy-selected">
+                            <!----><!---->
+                            <span>Buy KINGM</span>
+                        </button>
+                        <button data-v-457be90f="" type="button" class="el-button oper__action-btn el-button--default">
+                            <!----><!---->
+                            <span>Sell KINGM</span>
+                        </button>
+                    </div>
+                    <div data-v-457be90f="" class="panel__oper-item">
+                        <div data-v-457be90f="" class="input">
+                            <div data-v-457be90f="" class="input__desc"><span data-v-457be90f="">Available USDT: </span><span data-v-457be90f="">0</span></div>
+                            <div data-v-457be90f="" class="input__item">
+                                <i data-v-457be90f="" class="iconfont icon-num"></i>
+                                <div data-v-457be90f="" class="input__item-i el-input-number is-without-controls">
+                                    <!----><!---->
+                                    <div class="el-input">
+                                        <!---->
+                                        <input
+                                            type="text"
+                                            autocomplete="off"
+                                            placeholder="Enter price"
+                                            max="Infinity"
+                                            min="0"
+                                            class="el-input__inner"
+                                            role="spinbutton"
+                                            aria-valuemax="Infinity"
+                                            aria-valuemin="0"
+                                            aria-valuenow="0"
+                                            aria-disabled="false"
+                                        />
+                                        <!----><!----><!----><!---->
+                                    </div>
+                                </div>
+                                <button data-v-457be90f="" type="button" class="el-button item-btn el-button--default">
+                                    <!----><!---->
+                                    <span>USDT</span>
+                                </button>
+                            </div>
+                            <div data-v-457be90f="" class="input__item">
+                                <i data-v-457be90f="" class="iconfont icon-amt"></i>
+                                <div data-v-457be90f="" class="input__item-i el-input-number is-without-controls">
+                                    <!----><!---->
+                                    <div class="el-input">
+                                        <!---->
+                                        <input
+                                            type="text"
+                                            autocomplete="off"
+                                            placeholder="Num"
+                                            max="Infinity"
+                                            min="0"
+                                            class="el-input__inner"
+                                            role="spinbutton"
+                                            aria-valuemax="Infinity"
+                                            aria-valuemin="0"
+                                            aria-valuenow="0"
+                                            aria-disabled="false"
+                                        />
+                                        <!----><!----><!----><!---->
+                                    </div>
+                                </div>
+                                <button data-v-457be90f="" type="button" class="el-button item-btn el-button--default">
+                                    <!----><!---->
+                                    <span>KINGM</span>
+                                </button>
+                            </div>
+                            <div data-v-457be90f="" class="input__item">
+                                <i data-v-457be90f="" class="iconfont icon-code"></i>
+                                <div data-v-457be90f="" class="input__item-i el-input-number is-disabled is-without-controls">
+                                    <!----><!---->
+                                    <div class="el-input is-disabled">
+                                        <!---->
+                                        <input
+                                            type="text"
+                                            disabled="disabled"
+                                            autocomplete="off"
+                                            placeholder="Amount"
+                                            max="Infinity"
+                                            min="-Infinity"
+                                            class="el-input__inner"
+                                            role="spinbutton"
+                                            aria-valuemax="Infinity"
+                                            aria-valuemin="-Infinity"
+                                            aria-valuenow="0"
+                                            aria-disabled="true"
+                                        />
+                                        <!----><!----><!----><!---->
+                                    </div>
+                                </div>
+                                <button data-v-457be90f="" type="button" class="el-button item-btn el-button--default">
+                                    <!----><!---->
+                                    <span>USDT</span>
+                                </button>
+                            </div>
+                            <a data-v-457be90f="" href="/login" class="el-button input__btn input__buy el-button--default">
+                                <!----><!---->
+                                <span><i data-v-457be90f="" class="iconfont iconf-feiji"></i> <span data-v-457be90f="">login</span></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'main/footer.html' %}
+</section>
+{% endblock %}
