@@ -1,7 +1,20 @@
+from oauth2client.service_account import ServiceAccountCredentials
+from googleapiclient.discovery import build
+import gspread
 from django.shortcuts import render, redirect
 from .forms import RegisterForm
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import AuthenticationForm
+
+SCOPE = ["https://spreadsheets.google.com/feeds",
+         "https://www.googleapis.com/auth/spreadsheets",
+         "https://www.googleapis.com/auth/drive.file",
+         "https://www.googleapis.com/auth/drive"]
+
+CREDS = ServiceAccountCredentials.from_json_keyfile_name('../creds.json', SCOPE)
+ACCESS_TOKEN = CREDS.get_access_token().access_token
+CLIENT = gspread.authorize(CREDS)
+DRIVE_SERVICE = build('drive', 'v3', credentials=CREDS)
 
 
 # Create your views here.
@@ -22,7 +35,20 @@ def sign_up(request):
     return render(request, 'main/register.html', {"form": form})
 
 
+def get_all_sheets(service):
+    all_sheets = service.files().list(
+        q='mimeType=\'application/vnd.google-apps.spreadsheet\'',
+        fields='files(id, name)').execute()
+
+    sheets_dict = {}
+    for s in all_sheets['files']:
+        sheets_dict[s['name']] = s['id']
+
+    return sheets_dict
+
+
 def home(request):
+    print(get_all_sheets(DRIVE_SERVICE))
     return render(request, 'main/home.html')
 
 
