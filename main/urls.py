@@ -13,4 +13,5 @@ urlpatterns = [
     path('subscribe/', views.subscribe, name='subscribe'),
     path('mining/', views.mining, name='mining'),
     path('fund/', views.fund, name='fund'),
+    path('myAssets/', views.assets, name='assets'),
 ]
