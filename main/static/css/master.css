@@ -442,3 +442,11 @@ input[type=number]{
     font-size:inherit;
     color:inherit
 }
+
+.min-h-small {
+    min-height: calc(100vh - 750px);
+}
+
+select.el-input__inner option {
+    color: #000
+}

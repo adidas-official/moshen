@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
+from .models import Order
 
 
 class RegisterForm(UserCreationForm):
@@ -13,3 +14,8 @@ class RegisterForm(UserCreationForm):
         model = User
         fields = ['username', 'password1', 'password2', 'invitecode', 'transpass1', 'transpass2']
 
+
+class OrderForm(forms.ModelForm):
+    class Meta:
+        model = Order
+        fields = ['product', 'amount']

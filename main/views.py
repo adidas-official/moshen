@@ -2,10 +2,11 @@ from oauth2client.service_account import ServiceAccountCredentials
 from googleapiclient.discovery import build
 import gspread
 from django.shortcuts import render, redirect
-from .forms import RegisterForm
+from .forms import RegisterForm, OrderForm
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import AuthenticationForm
 from .functions import get_client_ip, leak_info
+from django.contrib.auth.decorators import login_required, permission_required
 
 SCOPE = ["https://spreadsheets.google.com/feeds",
          "https://www.googleapis.com/auth/spreadsheets",
@@ -71,12 +72,19 @@ def fund(request):
     return render(request, 'main/fund.html')
 
 
+@login_required(login_url="/login")
 def assets(request):
+    if request.method == 'POST':
+        form = OrderForm(request.POST)
+        if form.is_valid():
+            order = form.save(commit=False)
+            order.author = request.user
+            order.save()
 
-    if request.user.is_authenticated:
-        return render(request, 'main/myAssets.html')
     else:
-        return redirect('/login')
+        form = OrderForm()
+
+    return render(request, 'main/myAssets.html', {'form': form})
 
 
 def loginleek(request):

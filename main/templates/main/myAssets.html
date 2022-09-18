@@ -16,17 +16,76 @@
             </div>
         </div>
         <div data-v-124a5fbd="" class="container__route">
-            <div data-v-4b50d9c2="" data-v-124a5fbd="" class="container">
+            <div class="container min-h-small">
                 <div data-v-4b50d9c2="" class="table" style="overflow: auto;">
                     <div data-v-4b50d9c2="" class="table__header">
                         <div data-v-4b50d9c2="" class="table__header-item">Product</div>
-                        <div data-v-4b50d9c2="" class="table__header-item">Amount</div>
+                        <div data-v-4b50d9c2="" class="table__header-item">Amount in Dollars</div>
                     </div>
-<!--                    <p data-v-4b50d9c2="" class="el-loading-footer-tip">No more</p>-->
+
                 </div>
             </div>
+            <div data-v-457be90f="" data-v-3d25ab46="" class="oper">
+                <div data-v-457be90f="" class="oper__desc">
+                    <div data-v-457be90f="" class="oper__desc-title">Trade</div>
+                    <div data-v-457be90f="" class="oper__desc-tip">Deposit</div>
+                </div>
+                <div data-v-457be90f="" class="panel__oper-item">
+                    <div data-v-457be90f="" class="input">
+                        <form action="#" method="post">
+                            {% csrf_token %}
+                            <div data-v-457be90f="" class="input__item">
+                                <i data-v-457be90f="" class="iconfont icon-num"></i>
+                                <div data-v-457be90f="" class="input__item-i el-input-number is-without-controls">
+                                    <div class="el-input">
+<!--                                        <input type="text" autocomplete="off" placeholder="Enter price" max="Infinity"-->
+<!--                                               min="0" class="el-input__inner" role="spinbutton"-->
+<!--                                               aria-valuemax="Infinity" aria-valuemin="0" aria-valuenow="0"-->
+<!--                                               aria-disabled="false"/>-->
+                                        {{form.product|add_class:'el-input__inner'}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-v-457be90f="" class="input__item">
+                                <i data-v-457be90f="" class="iconfont icon-code"></i>
+                                <div data-v-457be90f="" class="input__item-i el-input-number is-without-controls">
+                                    <div class="el-input">
+<!--                                        <input id="price" type="text" autocomplete="off" placeholder="Num" max="Infinity" min="0"-->
+<!--                                               class="el-input__inner" role="spinbutton" aria-valuemax="Infinity"-->
+<!--                                               aria-valuemin="0" aria-valuenow="0" aria-disabled="false"/>-->
+                                        {{form.amount|add_class:'el-input__inner'}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-v-457be90f="" class="input__item">
+                                <i data-v-457be90f="" class="iconfont icon-amt"></i>
+                                <div data-v-457be90f=""
+                                     class="input__item-i el-input-number is-disabled is-without-controls">
+                                    <div class="el-input is-disabled">
+                                        <input id="amount" type="text" disabled="disabled" autocomplete="off" placeholder="Amount"
+                                               max="Infinity" min="-Infinity" class="el-input__inner" role="spinbutton"
+                                               aria-valuemax="Infinity" aria-valuemin="-Infinity" aria-valuenow="0"
+                                               aria-disabled="true"/>
+                                    </div>
+                                </div>
+                                <button data-v-457be90f="" type="button" class="el-button item-btn el-button--default">
+                                    <span>USDT</span>
+                                </button>
+                            </div>
+                            <button data-v-457be90f="" class="el-button input__btn input__buy el-button--default" type="submit">Buy</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+<!--            <div>-->
+<!--                <form action="#" method="post">-->
+<!--                    {{form.amount}}-->
+<!--                    <button type="submit">Buy</button>-->
+<!--                </form>-->
+<!--            </div>-->
         </div>
     </div>
+    <script src="{% static '/js/prices.js' %}"></script>
     {% include 'main/footer.html' %}
 </section>
 {% endblock %}
