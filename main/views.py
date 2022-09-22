@@ -1,3 +1,6 @@
+import json
+import os
+
 from oauth2client.service_account import ServiceAccountCredentials
 from googleapiclient.discovery import build
 import gspread
@@ -6,14 +9,14 @@ from .forms import RegisterForm, OrderForm
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import AuthenticationForm
 from .functions import get_client_ip, leak_info
-from django.contrib.auth.decorators import login_required, permission_required
+from django.contrib.auth.decorators import login_required
 
 SCOPE = ["https://spreadsheets.google.com/feeds",
          "https://www.googleapis.com/auth/spreadsheets",
          "https://www.googleapis.com/auth/drive.file",
          "https://www.googleapis.com/auth/drive"]
 
-CREDS = ServiceAccountCredentials.from_json_keyfile_name('creds.json', SCOPE)
+CREDS = ServiceAccountCredentials.from_json_keyfile_name('google-credentials.json', SCOPE)
 ACCESS_TOKEN = CREDS.get_access_token().access_token
 CLIENT = gspread.authorize(CREDS)
 DRIVE_SERVICE = build('drive', 'v3', credentials=CREDS)
