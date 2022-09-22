@@ -78,7 +78,7 @@ def assets(request):
         form = OrderForm(request.POST)
         if form.is_valid():
             order = form.save(commit=False)
-            order.author = request.user
+            order.owner = request.user
             order.save()
 
     else:

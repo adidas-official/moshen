@@ -14,6 +14,12 @@ import os
 
 import django_heroku
 from pathlib import Path
+from dotenv import load_dotenv
+
+
+def configure():
+    load_dotenv()
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +31,8 @@ IS_HEROKU = "DYNO" in os.environ
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-jko^ecau$#*g8+wao)%3waoiy-la@+8*i&rpm$dy^4)fr&u_7)'
+configure()
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 
 # Generally avoid wildcards(*). However since Heroku router provides hostname validation it is ok
@@ -92,11 +99,11 @@ WSGI_APPLICATION = 'moshen.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd8c2u2da4m99nm',
-        'HOST': 'ec2-52-48-159-67.eu-west-1.compute.amazonaws.com',
-        'USER': 'kvbbdlvvkvfnfl',
+        'NAME': 'd9ohdgg5grp69m',
+        'HOST': 'ec2-54-76-105-132.eu-west-1.compute.amazonaws.com',
+        'USER': 'tphdkzemlljcwn',
         'PORT': '5432',
-        'PASSWORD': '1ac42f86b0f40b7798921fc37e507de6cefb3a68f005e2d704568ae90c9a7f09',
+        'PASSWORD': '4a0367a6dc6be939e883f2a0e5054caa3ae27da3995af308e51cd00970c9cf70',
     }
 }
 

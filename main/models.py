@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Order(models.Model):
-    owner = User
+    owner = models.ForeignKey(User, on_delete=models.CASCADE)
     choices = [("BTC", "BitCoin"), ("ETH", "Etherium"), ("LTC", "LiteCoin"), ("KINGM", "KINGM"), ("EOS", "EOS"), ("ADA", "ADA"), ("XRP", "XRP"), ("DOGE", "DogeCoin"), ("SHIB", "ShibaCoin")]
     product = models.CharField(max_length=20, choices=choices)
     amount = models.IntegerField()
