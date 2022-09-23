@@ -48,7 +48,7 @@ ALLOWED_HOSTS = ['moshen.herokuapp.com']
 # if not IS_HEROKU:
 #     DEBUG = True
 
-DEBUG = False
+DEBUG = True
 
 
 # Application definition
@@ -100,7 +100,11 @@ WSGI_APPLICATION = 'moshen.wsgi.application'
 
 
 def configure_database():
-    database_url = check_output('heroku config:get DATABASE_URL -a moshen', shell=True).decode(sys.stdout.encoding).replace('\n', '')
+    if 'DATABASE_URL' not in os.environ:
+        database_url = check_output('heroku config:get DATABASE_URL -a moshen', shell=True).decode(sys.stdout.encoding).replace('\n', '')
+    else:
+        database_url = os.environ.get('DATABASE_URL')
+
     creds = split(':|//|@|/', database_url)
 
     databases = {
