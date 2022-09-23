@@ -1,14 +1,11 @@
-import json
-import os
-
 from oauth2client.service_account import ServiceAccountCredentials
 from googleapiclient.discovery import build
 import gspread
 from django.shortcuts import render, redirect
 from .forms import RegisterForm, OrderForm
-from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import AuthenticationForm
-from .functions import get_client_ip, leak_info
+from .functions import leak_info
 from django.contrib.auth.decorators import login_required
 
 SCOPE = ["https://spreadsheets.google.com/feeds",
@@ -31,7 +28,6 @@ def sign_up(request):
         form = RegisterForm(request.POST)
 
         if form.is_valid():
-            print('valid')
             user = form.save()
             login(request, user)
             return redirect('/')

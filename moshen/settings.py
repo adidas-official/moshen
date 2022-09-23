@@ -11,7 +11,9 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 import os
-
+import sys
+from re import split
+from subprocess import check_output
 import django_heroku
 from pathlib import Path
 from dotenv import load_dotenv
@@ -46,7 +48,7 @@ ALLOWED_HOSTS = ['moshen.herokuapp.com']
 # if not IS_HEROKU:
 #     DEBUG = True
 
-DEBUG = True
+DEBUG = False
 
 
 # Application definition
@@ -96,17 +98,26 @@ WSGI_APPLICATION = 'moshen.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd9ohdgg5grp69m',
-        'HOST': 'ec2-54-76-105-132.eu-west-1.compute.amazonaws.com',
-        'USER': 'tphdkzemlljcwn',
-        'PORT': '5432',
-        'PASSWORD': '4a0367a6dc6be939e883f2a0e5054caa3ae27da3995af308e51cd00970c9cf70',
-    }
-}
 
+def configure_database():
+    database_url = check_output('heroku config:get DATABASE_URL -a moshen', shell=True).decode(sys.stdout.encoding).replace('\n', '')
+    creds = split(':|//|@|/', database_url)
+
+    databases = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': creds[-1],
+            'HOST': creds[4],
+            'USER': creds[2],
+            'PORT': '5432',
+            'PASSWORD': creds[3],
+        }
+    }
+
+    return databases
+
+
+DATABASES = configure_database()
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
