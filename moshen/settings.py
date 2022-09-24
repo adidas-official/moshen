@@ -169,3 +169,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/login'
+
+STRIPE_PUBLISHABLE_KEY = 'pk_test_51Ljp7nKR9GOBW9TeMlxJlYhmXsm9Ooa1vt5y8QvhZNwTi5CA7kBmiUvbtvCJwEvmiSRCiRCBWyl3bIfoznC1UV5y00QapOQY6d'
+if 'STRIPE_SECRET_KEY' in os.environ:
+    STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')

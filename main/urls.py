@@ -14,4 +14,6 @@ urlpatterns = [
     path('mining/', views.mining, name='mining'),
     path('fund/', views.fund, name='fund'),
     path('myAssets/', views.assets, name='assets'),
+    path('config/', views.stripe_config, name='config'),
+    path('create-checkout-session/', views.create_checkout_session, name='create_checkout_session'),
 ]
